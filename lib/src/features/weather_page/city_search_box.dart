@@ -71,7 +71,7 @@ class _CitySearchRowState extends ConsumerState<CitySearchBox> {
               ),
               child: Padding( //отступ
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                child: Text('search', //текст на кнопкее
+                child: Text('search', //текст на кнопке
                     style: Theme.of(context).textTheme.bodyText1),
               ),
             ),

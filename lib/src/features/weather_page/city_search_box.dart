@@ -20,12 +20,12 @@ class _CitySearchRowState extends ConsumerState<CitySearchBox> {
   @override
   void initState() {
     super.initState();
-    _searchController.text = ref.read(cityProvider);
+    _searchController.text = ref.read(cityProvider); //читает текст из cityProvider
   }
 
   @override
-  void dispose() {
-    _searchController.dispose();
+  void dispose() { //метод dispose вроде как освобождает память
+    _searchController.dispose(); // значит здесь он используется для удаления предыдущих городов
     super.dispose();
   }
 
@@ -41,7 +41,7 @@ class _CitySearchRowState extends ConsumerState<CitySearchBox> {
             child: SizedBox(
               height: 50, //размер по высоте, ширина автоматическая
               child: TextField(
-                controller: _searchController,
+                controller: _searchController, //наверное тут присваивается контроллер к тексту
                 textAlign: TextAlign.center, //текст по центру
                 style: const TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
@@ -54,7 +54,7 @@ class _CitySearchRowState extends ConsumerState<CitySearchBox> {
                   ),
                 ),
                 onSubmitted: (value) =>
-                    ref.read(cityProvider.state).state = value,
+                    ref.read(cityProvider.state).state = value, //наверное считывает написанный текст
               ),
             ),
           ),
@@ -76,7 +76,7 @@ class _CitySearchRowState extends ConsumerState<CitySearchBox> {
               ),
             ),
             onTap: () { //при нажатии
-              FocusScope.of(context).unfocus();
+              FocusScope.of(context).unfocus(); //текст из графы поиска присваивается контроллеру поиска
               ref.read(cityProvider.state).state = _searchController.text;
             },
           )

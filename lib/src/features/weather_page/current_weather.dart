@@ -5,6 +5,7 @@ import 'package:open_weather_example_flutter/src/features/weather_page/city_sear
 import 'package:open_weather_example_flutter/src/features/weather_page/current_weather_controller.dart';
 import 'package:open_weather_example_flutter/src/features/weather_page/weather_icon_image.dart';
 //прогноз текущей погоды
+//??
 class CurrentWeather extends ConsumerWidget { //создается класс на основе виджета  ConsumerWidget (может прослушивать провайдера)
   const CurrentWeather({Key? key}) : super(key: key);
   @override

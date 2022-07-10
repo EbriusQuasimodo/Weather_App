@@ -5,6 +5,7 @@ import 'package:open_weather_example_flutter/src/entities/weather/weather_data.d
 import 'package:open_weather_example_flutter/src/features/weather_page/hourly_weather_controller.dart';
 import 'package:open_weather_example_flutter/src/features/weather_page/weather_icon_image.dart';
 //почасовой прогноз погоды
+//??
 class HourlyWeather extends ConsumerWidget {
   const HourlyWeather({Key? key}) : super(key: key);
 

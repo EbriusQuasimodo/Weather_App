@@ -15,17 +15,17 @@ class CitySearchBox extends ConsumerStatefulWidget {
 class _CitySearchRowState extends ConsumerState<CitySearchBox> {
   static const _radius = 30.0;
 
-  late final _searchController = TextEditingController(); //возможно эо управление поиском
+  late final _searchController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    _searchController.text = ref.read(cityProvider); //читает текст из cityProvider
+    _searchController.text = ref.read(cityProvider); //получает значение из провайдера cityProvider
   }
 
   @override
   void dispose() { //метод dispose вроде как освобождает память
-    _searchController.dispose(); // значит здесь он используется для удаления предыдущих городов
+    _searchController.dispose();
     super.dispose();
   }
 
@@ -33,15 +33,15 @@ class _CitySearchRowState extends ConsumerState<CitySearchBox> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0), //отступ??
+      padding: const EdgeInsets.symmetric(horizontal: 20.0), //отступ
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center, //выравнивание по центру
         children: [
           Expanded(
             child: SizedBox(
-              height: 50, //размер по высоте, ширина автоматическая
+              height: 50, //размер по высоте 50, ширина автоматическая
               child: TextField(
-                controller: _searchController, //наверное тут присваивается контроллер к тексту
+                controller: _searchController,
                 textAlign: TextAlign.center, //текст по центру
                 style: const TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
@@ -54,7 +54,7 @@ class _CitySearchRowState extends ConsumerState<CitySearchBox> {
                   ),
                 ),
                 onSubmitted: (value) =>
-                    ref.read(cityProvider.state).state = value, //наверное считывает написанный текст
+                    ref.read(cityProvider.state).state = value, //наверное считывает написанный текст из провайдера
               ),
             ),
           ),
@@ -76,8 +76,8 @@ class _CitySearchRowState extends ConsumerState<CitySearchBox> {
               ),
             ),
             onTap: () { //при нажатии
-              FocusScope.of(context).unfocus(); //текст из графы поиска присваивается контроллеру поиска
-              ref.read(cityProvider.state).state = _searchController.text;
+              FocusScope.of(context).unfocus(); //снимает фокус с клавиатуры??
+              ref.read(cityProvider.state).state = _searchController.text; //текст считывается из провайдера
             },
           )
         ],

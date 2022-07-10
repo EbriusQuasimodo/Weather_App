@@ -25,8 +25,8 @@ class WeatherPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: const [
-              Spacer(),
-              CitySearchBox(),
+              Spacer(),//пустой разделитель
+              CitySearchBox(), //вызов класса
               Spacer(),
               CurrentWeather(),
               Spacer(),

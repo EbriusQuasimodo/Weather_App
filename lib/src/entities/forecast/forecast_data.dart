@@ -10,6 +10,6 @@ class ForecastData { //создается класс ForecastData
       forecast.list.map((item) => WeatherData.from(item)).toList(), //??
     );
   }
-  final List<WeatherData> list;
+  final List<WeatherData> list; //список данных погоды из класса weatherdata
 
 }

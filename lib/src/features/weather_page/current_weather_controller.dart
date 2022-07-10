@@ -4,6 +4,7 @@ import 'package:open_weather_example_flutter/src/features/weather_page/city_sear
 import 'package:open_weather_example_flutter/src/repositories/api_error.dart';
 import 'package:open_weather_example_flutter/src/repositories/weather_repository.dart';
 //контроллер текущей погоды
+//??
 class CurrentWeatherController extends StateNotifier<AsyncValue<WeatherData>> {
   CurrentWeatherController(this._weatherRepository, {required this.city})
       : super(const AsyncValue.loading()) {

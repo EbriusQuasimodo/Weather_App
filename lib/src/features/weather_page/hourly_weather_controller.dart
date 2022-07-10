@@ -4,6 +4,7 @@ import 'package:open_weather_example_flutter/src/features/weather_page/city_sear
 import 'package:open_weather_example_flutter/src/repositories/api_error.dart';
 import 'package:open_weather_example_flutter/src/repositories/weather_repository.dart';
 //контроллер почасового прогноза
+//??
 class HourlyWeatherController extends StateNotifier<AsyncValue<ForecastData>> {
   HourlyWeatherController(this._weatherRepository, {required String city})
       : super(const AsyncValue.loading()) {

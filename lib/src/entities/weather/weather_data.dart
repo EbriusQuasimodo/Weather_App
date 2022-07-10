@@ -31,5 +31,5 @@ class WeatherData {
   final DateTime date;
   final String icon;
 
-  String get iconUrl => "https://openweathermap.org/img/wn/$icon@2x.png"; //тут наверное получают url иконки
+  String get iconUrl => "https://openweathermap.org/img/wn/$icon@2x.png"; //??
 }

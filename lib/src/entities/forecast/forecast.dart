@@ -15,5 +15,5 @@ class Forecast with _$Forecast {
   }) = _Forecast;                      //он содержит список свойств (list) класса Forecast
 
   factory Forecast.fromJson(Map<String, dynamic> json) =>
-      _$ForecastFromJson(json); //forecast.g.dart генерирует метод ToJson для List
+      _$ForecastFromJson(json); //forecast.g.dart содержит реализацию методов toJSon fromJson, freezed генерирует метод ToJson
 }

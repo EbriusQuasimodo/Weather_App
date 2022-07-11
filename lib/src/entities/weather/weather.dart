@@ -12,7 +12,7 @@ class WeatherParams with _$WeatherParams {
   }) = _WeatherParams;
 
   factory WeatherParams.fromJson(Map<String, dynamic> json) =>
-      _$WeatherParamsFromJson(json); //weather.g.dart генерирует метод ToJson для temp, temp_min, temp_max
+      _$WeatherParamsFromJson(json); //weather.g.dart содержит реализацию методов toJSon fromJson, freezed генерирует метод ToJson
 }
 
 @freezed
@@ -24,7 +24,7 @@ class WeatherInfo with _$WeatherInfo {
   }) = _WeatherInfo;
 
   factory WeatherInfo.fromJson(Map<String, dynamic> json) =>
-      _$WeatherInfoFromJson(json);//weather.g.dart генерирует метод ToJson для main, description, icon
+      _$WeatherInfoFromJson(json);//weather.g.dart содержит реализацию методов toJSon fromJson, freezed генерирует метод ToJson
 }
 
 /// Weather data parsed from the API response (not used directly in the UI)
@@ -37,5 +37,5 @@ class Weather with _$Weather {
   }) = _Weather;
 
   factory Weather.fromJson(Map<String, dynamic> json) =>
-      _$WeatherFromJson(json); //weather.g.dart генерирует метод ToJson для main, weather, dt
+      _$WeatherFromJson(json); //weather.g.dart содержит реализацию методов toJSon fromJson , freezed генерирует метод ToJson
 }

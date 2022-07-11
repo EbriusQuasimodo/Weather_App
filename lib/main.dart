@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
-        textTheme: TextTheme(
+        textTheme: TextTheme( //настройка стиля
           headline1: textStyleWithShadow,
           headline2: textStyleWithShadow,
           headline3: textStyleWithShadow,
